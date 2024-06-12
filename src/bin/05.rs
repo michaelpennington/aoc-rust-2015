@@ -8,10 +8,8 @@ fn is_nice(s: &str) -> bool {
     let mut num_vowels = 0;
     let mut two_in_a_row = false;
     for c in s.chars() {
-        for pair in BAD_PAIRS {
-            if c == pair.1 && prev_char == pair.0 {
-                return false;
-            }
+        if BAD_PAIRS.contains(&(prev_char, c)) {
+            return false;
         }
         if VOWELS.contains(&c) {
             num_vowels += 1;
