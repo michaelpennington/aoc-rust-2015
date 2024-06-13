@@ -81,12 +81,7 @@ pub fn part_two(input: &str) -> Option<u32> {
             }
         }
     }
-    Some(
-        lights
-            .iter()
-            .flat_map(|l| l.iter())
-            .sum(),
-    )
+    Some(lights.iter().flat_map(|l| l.iter()).sum())
 }
 
 #[cfg(test)]
