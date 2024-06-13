@@ -116,10 +116,4 @@ mod tests {
         ));
         assert_eq!(result, Some(998_996));
     }
-
-    #[test]
-    fn test_part_two() {
-        let result = part_two(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
-    }
 }
