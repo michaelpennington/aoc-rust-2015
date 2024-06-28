@@ -240,7 +240,7 @@ impl Puzzle {
             }
             let mut mol_vec = new_set.into_iter().collect::<Vec<_>>();
             mol_vec.sort_by_key(|m| m.len());
-            mol_vec.truncate(10);
+            mol_vec.truncate(1);
             set = mol_vec.into_iter().collect();
         }
         0
