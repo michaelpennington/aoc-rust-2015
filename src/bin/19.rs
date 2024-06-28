@@ -227,9 +227,7 @@ impl Puzzle {
                     for map in maps_to {
                         for i in mol.get_indices_mol(map.clone()) {
                             let mut mol = mol.clone();
-                            // print!("Replacing {map} by {e} at index {i}, {mol} becomes ");
                             mol.replace_mol(i, map.len(), e);
-                            // println!("{mol}");
                             if mol == goal {
                                 return index;
                             }
